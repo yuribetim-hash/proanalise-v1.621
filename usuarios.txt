@@ -1,0 +1,34 @@
+# ============================================
+# ARQUIVO DE USUÁRIOS - PROANALISES v1.61
+# ============================================
+# Formato: usuario;senha;papel;nivel
+# 
+# NÍVEIS DE ACESSO:
+# Nível 1 - Estagiário: Acesso básico (Protocolo, Analista, Análise, Revisão, Gerar parecer)
+# Nível 2 - Estagiário Sênior: Acesso intermediário (tudo do nível 1 + Dashboard)
+# Nível 3 - Analista Responsável: Acesso total (tudo do nível 2 + Comparador)
+#
+# Para desativar um usuário, adicione # no início da linha
+# ============================================
+
+# ----- ANALISTAS RESPONSÁVEIS (Nível 3) -----
+# Usuários com acesso total ao sistema
+yuri;123456;Analista Responsável;3
+
+# ----- ESTAGIÁRIOS SÊNIOR (Nível 2) -----
+# Usuários com acesso ao Dashboard
+# maria;123456;Estagiário Sênior;2
+# fernanda;123456;Estagiário Sênior;2
+# roberto;123456;Estagiário Sênior;2
+
+# ----- ESTAGIÁRIOS (Nível 1) -----
+# Usuários com acesso básico à análise
+admin;123456;Estagiário;1
+
+# ============================================
+# INSTRUÇÕES:
+# 1. Não altere o formato das linhas (use ; como separador)
+# 2. Para adicionar um novo usuário, siga o padrão: nome;senha;papel;nivel
+# 3. Para remover um usuário, basta deletar a linha ou comentar com #
+# 4. As senhas são armazenadas em texto plano (recomendado alterar após primeiro acesso)
+# ============================================
