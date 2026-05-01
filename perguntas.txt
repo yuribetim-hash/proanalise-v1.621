@@ -1,0 +1,476 @@
+GRUPO: PRÉ ANÁLISE
+ID: pre_taxa
+PERGUNTA: Apresentou a comprovação de pagamento da taxa de análise?
+OPCOES: Sim;Não;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Apresentar taxa de análise do aceite urbanístico, com comprovante de pagamento;
+
+GRUPO: PRÉ ANÁLISE
+ID: pre_requisitos
+PERGUNTA: Rua Frontal tem domínio público e as infras necessárias?
+OPCOES: Sim;Não;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: 19.	Fica proibido o parcelamento de solo em imóveis sem frente para via pública oficial ou via sem comprovação de domínio público (Lei Federal 6.766/1979, Art. 2 e LC 418/2024). 25.	É proibido o loteamento/condomínio de lotes em: áreas fora do alcance dos equipamentos urbanos, especialmente das redes públicas de abastecimento de água potável, das redes de drenagem pluvial e de energia elétrica pública (lei 418/2024 Art. 6° inciso VI)
+
+GRUPO: PRÉ ANÁLISE
+ID: pre_perimetro
+PERGUNTA: O imóvel se projeta sobre área rural?
+OPCOES: Sim;Não;Não se enquadra
+CONFORMES: Não;Não se enquadra
+REGRA_Sim: O projeto de parcelamento do solo com finalidade urbana somente poderá se projetar sobre o perímetro urbano municipal.
+
+GRUPO: PRÉ ANÁLISE
+ID: pre_doc_min
+PERGUNTA: Apresentou documentação mínima?
+OPCOES: Sim;Não;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Apresentar consultas de viabilidade deferidas, dentro do prazo de validade, matrícula atualizada (90 dias), planta do projeto proposto;
+
+GRUPO: VIABILIDADES
+ID: viab_urb_comp
+PERGUNTA: Apresentou consulta de viabilidade urbanística compatível ao projeto pleiteado?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Deverá apresentar projeto urbanístico compatível com a consulta de viabilidade deferida.
+
+GRUPO: VIABILIDADES
+ID: viab_urb_prazo
+PERGUNTA: Apresentou consulta de viabilidade urbanística com prazo vigente?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A consulta de viabilidade urbanística encontra-se vencida. Deverá proceder com a renovação junto à comissão responsável.
+
+GRUPO: VIABILIDADES
+ID: viab_urb_lotes
+PERGUNTA: A consulta de viabilidade urbanística apresenta o mesmo número de lotes do projeto proposto?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A consulta de viabilidade urbanística não abrange o número total de lotes do projeto. Deverá proceder com a compatibilização.
+
+GRUPO: VIABILIDADES
+ID: viab_urb_tipo
+PERGUNTA: A consulta de viabilidade e o projeto são do mesmo tipo de empreendimento?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A consulta de viabilidade urbanística e o projeto não se referem ao mesmo tipo de empreendimento.
+
+GRUPO: VIABILIDADES
+ID: viab_urb_cond
+PERGUNTA: Existe alguma condicionante na viabilidade urbanística que deva ser considerada?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Não;Não se enquadra
+REGRA_Sim: A consulta de viabilidade urbanística apresenta condicionantes que deverão ser cumpridas.
+
+GRUPO: VIABILIDADES
+ID: viab_ele_ap
+PERGUNTA: Apresentou a viabilidade de abastecimento elétrico?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Apresentar a declaração de possibilidade de abastecimento de energia elétrica;
+
+GRUPO: VIABILIDADES
+ID: viab_ele_lotes
+PERGUNTA: A viabilidade elétrica apresenta o mesmo número de lotes do projeto?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A viabilidade elétrica não abrange o número total de lotes do projeto. Deverá proceder com a compatibilização.
+
+GRUPO: VIABILIDADES
+ID: viab_ele_cond
+PERGUNTA: Existe alguma condicionante na viabilidade elétrica?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Não;Não se enquadra
+REGRA_Sim: A viabilidade elétrica apresenta condicionantes que deverão ser cumpridas.
+
+GRUPO: VIABILIDADES
+ID: viab_abast_comp
+PERGUNTA: Apresentou viabilidade de abastecimento de água compatível ao projeto?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A viabilidade de abastecimento de água e o projeto diferem. Deverá proceder com a compatibilização.
+
+GRUPO: VIABILIDADES
+ID: viab_abast_lotes
+PERGUNTA: A viabilidade de abastecimento de água apresenta o mesmo número de lotes do projeto?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A viabilidade de abastecimento de água não abrange o número total de lotes do projeto. Deverá proceder com a compatibilização.
+
+GRUPO: VIABILIDADES
+ID: viab_abast_prazo
+PERGUNTA: A viabilidade de abastecimento de água está dentro do prazo de validade?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A viabilidade de abastecimento de água encontra-se vencida. Deverá solicitar renovação.
+
+GRUPO: VIABILIDADES
+ID: viab_abast_cond
+PERGUNTA: Existe alguma condicionante na viabilidade de abastecimento de água?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Não;Não se enquadra
+REGRA_Sim: A viabilidade de abastecimento de água apresenta condicionantes que deverão ser cumpridas.
+
+GRUPO: VIABILIDADES
+ID: viab_setram
+PERGUNTA: Apresentou anuência do SETRAM?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Sim: Considerando a necessidade de avaliação do impacto viário que o empreendimento exercerá sobre as vias municipais e o trânsito regional, será enviada aos cuidados do SETRAM a proposta de projeto para que o mesmo delibere sobre as soluções de trânsito cabíveis. Todas as exigências (se for o caso) de trânsito deverão ser devidamente sanadas e dispostas em projeto urbanístico;
+
+GRUPO: DOCUMENTAL
+ID: doc_matricula
+PERGUNTA: Apresentou matrícula(s) do empreendimento atualizada (90 dias)?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Deverá apresentar matrícula(s) atualizada(s) do empreendimento (90 dias).
+
+GRUPO: DOCUMENTAL
+ID: doc_matricula_comp
+PERGUNTA: Apresentou matrícula(s) do empreendimento compatível entre projeto e viabilidade?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A(s) matrícula(s) informada(s) em viabilidade e/ou projeto proposto não são compatíveis. Proceder com a correção.
+
+GRUPO: DOCUMENTAL
+ID: doc_matricula_leitura
+PERGUNTA: Realisou a leitura completa da(s) matrícula(s) do empreendimento? Apontar as observações pertinentes. Buscar por averbações restritivas impositivas e que impactem no projeto.
+OPCOES: Sim;Não;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: ****Atenção analista, realize a leitura completa das matrículas do empreendimento.
+
+GRUPO: DOCUMENTAL
+ID: doc_cnd
+PERGUNTA: Apresentou a certidão negativa de débitos municipal da(s) matrícula(s) do empreendimento?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Apresentar Certidão Negativa de Débitos Municipais em favor da(s) matrícula(s) envolvida(s) no processo
+
+GRUPO: DOCUMENTAL
+ID: doc_cs
+PERGUNTA: Caso CNPJ apresentou contrato social ou certidão simplificada para o responsável proprietário do empreendimento?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Apresentar o contrato social da empresa ou certidão simplificada em que seja possível verificar qual ou quais os responsáveis legais pela administração. No campo de assinatura do(s) proprietário(s) deverá indicar o(s) responsáveis pela administração conforme estabelecido em documento comprobatório;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_area_publica
+PERGUNTA: Existe alguma área pública confrontando o empreendimento?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Não;Não se enquadra
+REGRA_Não: A área do empreendimento confronta com terreno público municipal. Informamos que será realizado o georreferenciamento e avaliação da área, visando assegurar a preservação do patrimônio público municipal.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_area_app
+PERGUNTA: Existe algum curso d'agua? representou app corretamente?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Adequar planta de projeto para conter: Cursos d’agua, representação das Áreas de Preservação Permanente e suas dimensões de afastamento.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_area_risco
+PERGUNTA: Existe alguma área da setorização de risco incidindo no empreendimento?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Não;Não se enquadra
+REGRA_Não: Foi encaminhado pedido de parecer à Defesa Civil, por meio de memorando interno via sistema 1Doc, em razão de o terreno ser atingido por área de risco.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_area_celesc
+PERGUNTA: Existe alguma linha de transmissão de energia da Celesc no imóvel? Apresentou?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Adequar projeto urbanístico para conter: Representação da faixa de serviço da linha de transmissão de energia presente no imóvel (CELESC). Vide manual de Procedimentos da Celesc.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_area_tbg
+PERGUNTA: Existe alguma linha de transmissão de gás no imóvel (TBG)? Apresentou?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Adequar o projeto urbanístico para contemplar a representação da faixa de servidão da linha de transmissão de gás (TBG) existente no imóvel. Para o possível futuro alvará do empreendimento deverá apresentar, ainda, a anuência da Transportadora Brasileira Gasoduto Bolívia-Brasil S/A (TBG) referente ao gasoduto que atravessa a área do empreendimento.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_area_eletrosul
+PERGUNTA: Existe alguma linha de transmissão de energia da Eletrosul no imóvel? Apresentou?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Adequar projeto urbanístico para conter: Representação da faixa de serviço da linha de transmissão de energia presente no imóvel (Eletrosul). Para o possível futuro alvará do empreendimento deverá apresentar, ainda, a anuência da Eletrosul referente a linha de transmissão que atravessa a área do empreendimento.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_area_dominio
+PERGUNTA: Existe alguma faixa de domínio rodoviário? Apresentou? informar qual em observações.
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Adequar projeto urbanístico para conter: Representação da faixa de domínio rodoviário. Para o possível futuro alvará do empreendimento deverá apresentar, ainda, a anuência do órgão gestor da faixa de domínio para a implantação do empreendimento.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_raio
+PERGUNTA: Respeitou o Raio de curvatura proporcional ao ângulo?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Adequar raio de curvatura no(s) lote(s) de esquina:
+       Nos lotes de esquina, a intersecção dos dois alinhamentos de muro se dará por um arco de círculo obedecendo aos seguintes parâmetros. Deverá ser resguardada a área para adequação de raio de curvatura através de faixa não edificante, ou retificação de área, desafetando a área do raio de curvatura;
+       I - até 15 graus: 2 m (dois metros) de raio mínimo;
+       II - 15,01 a 45 graus: 3 m (três metros) de raio mínimo;
+       III - 45,01 a 60 graus: 4 m (quatro metros) de raio mínimo;
+       IV - 60,01 a 105 graus: 6 m (seis metros) de raio mínimo;
+       V - 105,01 a 120 graus: 8 m (oito metros) de raio mínimo;
+       VI - 120,01 a 135 graus: 10 m (dez metros) de raio mínimo;
+       VII - maior que 135 graus: 12 m (doze metros);
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_endereco
+PERGUNTA: Endereço descrito é totalmente compatível com o GEO? Se não, informar corretamente nas observações.
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Adequar as informações do endereço do imóvel para que esteja totalmente compatível com o cadastro municipal, vide observações.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_gabarito
+PERGUNTA: Respeitou o gabarito oficial para a rua de acesso? Informar o gabarito correto nas observações.
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Adequar o gabarito viário para que esteja compatível oficialmente.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_extensao
+PERGUNTA: Respeitou a extensão oficial para a rua de acesso? Informar a extensão oficial nas observações.
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Adequar a representação da extensão oficial do sistema viário para que esteja compatível oficialmente.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_cotas
+PERGUNTA: Todas as cotas necessárias estão descritas? indicar em observações.
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Adequar a representação a(s) cota(s) faltante(s) necessária(s).
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_decllotes
+PERGUNTA: Indicou a declividade dos lotes no quadro de áreas?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: indicar a declividade média e a área em m² com declividade inferior a 30% no quadro de lotes.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_assinaturas
+PERGUNTA: Apresentou campos para todas as assinaturas necessárias?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Apresentar os campos de assinaturas para todos os proprietários da(s) matrículas do empreendimento.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_confrontantes
+PERGUNTA: Indicou todas as confrontações do empreendimento?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Adequar planta de projeto para conter: Códigos das parcelas confrontantes, expressos pelo número da matrícula ou nome completo e número do cadastro de pessoa física (CPF) do confrontante (na inexistência do número da matrícula do imóvel confrontante). Adequar planta de projeto para conter: (s) logradouro(s) confrontante(s)(caso exista), com as devidas cotas de gabarito definidas por lei;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_fsne
+PERGUNTA: Apresentou, linhas de escoamento das águas pluviais? faixa sanitária com ao menos 3,5 m?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Representar em projeto urbanístico as linhas de escoamento das águas pluviais, prevendo assim quando necessária a implementação de faixas de drenagem pluvial;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_geoimage
+PERGUNTA: Apresentou a imagem aérea com a projeção da(s) matrícula(s)?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Representar em projeto urbanístico a imagem aérea com a projeção da(s) matrícula(s) envolvidas no empreendimento.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_declilong
+PERGUNTA: Apresentou informações da declividade longitudinal do sistema viário do empreendimento (min 0,3% - máx 20%)?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Representar em projeto urbanístico informações para o arruamento do empreendimento. A declividade longitudinal mínima de 0,3% e máximo de 20%. OBS¹ - Para inclinações de vias acima de 20,01% a 25% não poderá haver acesso a lotes. Devendo apresentar solução adequada de pavimentação
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_declitrans
+PERGUNTA: Apresentou informações da declividade longitudinal do sistema viário do empreendimento (min 2% - máx 4%)?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Representar em projeto urbanístico informações para o arruamento do empreendimento. A declividade longitudinal mínima de 2% e máximo de 4%;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_viadeacess
+PERGUNTA: A via de acesso ao empreendimento está totalmente dentro da(s) matrícula(s) interessada(s)?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A via de acesso do empreendimento se projeta/projeta seu raio de acesso sobre matrículas vizinhzas. Para o alvará deverá apresentar a via de acesso integralmente dento do empreendimento, apresentar anuência do proprietário da matrícula vizinha ou adequar o empreendimento para que a via de acesso esteja adequada dentro dos próprios limites.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_gabemp
+PERGUNTA: O empreendimento apresenta gabarito mínimo (7,5m de pista e 2,0 m de passeio)
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: O gabarito mínimo para Loteamentos é de 7,5m de pista e 2,0 m de passeio, corrigir projeto urbanístico
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_pracaret
+PERGUNTA: O empreendimento apresenta praça de retorno? (Se necessário em ruas sem saída)
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Para ruas sem saída, projetar praça de retorno com no mínimo o raio de curvatura igual á largura da via; Ex, total de pista 12 m, raio de curvatura da praça de retorno de 12 m;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_contgab
+PERGUNTA: Quando prolongamento, nunca inferior á via pública montante (indicar nas observações gabarito a seguir):
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Verificar e corrigir o gabarito viário do empreendimento para que não seja inferior ao gabarito da rua montante do empreendimento.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_arealot
+PERGUNTA: Os lotes contam com ao menos 240 m²?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Corrigir projeto urbanístico para que as áreas mínimas dos lotes, não sejam inferiores á 240 m² (LC 418/2024);
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_testadalot
+PERGUNTA: Os lotes contam com ao menos 12 m de testada para via pública ou rua projetada do empreendimento?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Corrigir projeto urbanístico para que as testadas dos lotes, não sejam inferiores á 12 m (LC 418/2024);
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_testadaaverd
+PERGUNTA: Os lotes de  área verde contam com ao menos 5 m de testada para via pública ou rua projetada do empreendimento?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Corrigir projeto urbanístico para que as testadas dos lotes de área verde, não sejam inferiores á 5 m (LC 418/2024);
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_transposicao
+PERGUNTA: Apresentou a forma de transposição dos cursos de água?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Representar em projeto urbanístico as formas de transposição dos cursos d’agua existentes;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_remanesc
+PERGUNTA: Apenas uma área remanescente?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Apenas será permitida uma área remanescente por empreendimento, devendo esta ser contígua e de acesso único;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_testaremanesc
+PERGUNTA: Testada mínima 12 e máxima da remanescente com 23 m?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A área remanescente poderá ser acessada somente por via projetada do empreendimento, ficando limitada a uma testada mínima de 12 m e máxima de 23 m;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_arearemanesc
+PERGUNTA: área da remanescente maior ou igual 240 m²?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A área remanescente deverá possuir ao menos 240 m²;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_acessoremanesc
+PERGUNTA: área da remanescente é acessada por via pública existente?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A área remanescente não poderá conter acesso por via pública existente;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_decota
+PERGUNTA: Apresentou as curvas de nível projetadas, cotadas de m em m?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Representar em projeto urbanístico as curvas de nível projetadas com cota de metro em metro.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_lquadra
+PERGUNTA: Comprimento de quadra ultrapassa 500 m?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Não;Não se enquadra
+REGRA_Não: Corrigir o projeto urbanístico para que nenhuma quadra ultrapasse 500 m de comprimento;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_divquadra
+PERGUNTA: representou adequadamente a subdivisão das quadras? (Observações para não atendimento)
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Corrigir o projeto urbanístico para que a subdivisão de quadras esteja adequada;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_quadarea
+PERGUNTA: Apresentou o quadro de áreas padrão do seplan?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Apresentar o quadro de áreas/estatística padrão disponível em: https://drive.google.com/drive/folders/1ubxMSMAZxoF-5qOWkk-nhpM0VmdbJvQ2?usp=sharing. O quadro de áreas do empreendimento deverá ser o padrão elaborado por este departamento. Deverá copiar as informações preenchidas e colar como quadro de áreas do empreendimento na folha principal do projeto urbanístico. Deverá ainda preencher e disponibilizar a versão preenchida em formato .ods ou .xlsx, junto ao sistema para a confirmação das informações levadas ao projeto;
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_quadareaadeq
+PERGUNTA: Apresentou dados suficientes para analisar o quadro de áreas?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Apresentar quadro de áreas padrão adequadamente preenchido passível de análise completa
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_apec
+PERGUNTA: Apresentou APEC?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Apresentar em projeto as áreas públicas de equipamentos comunitários. Caso se pretenda doar área fora do empreendimento deverá Indicar a matrícula que será utilizada para suprir os 10% destinados à área pública de equipamentos comunitários. Informo, ainda, que, para eventual emissão futura do alvará do empreendimento, será obrigatória a apresentação de avaliação do valor imobiliário da área, a fim de assegurar que a área objeto de compensação das áreas públicas destinadas a equipamentos comunitários possua valor imobiliário equivalente ao da área destinada ao empreendimento em matrícula distinta.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_apecarea
+PERGUNTA: A APEC contem ao menos 240 m² de área mínima e 125 m² de área útil?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A APEC deverá obrigatoriamente ter área mínima maior do que 240 m².
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_apectest
+PERGUNTA: A APEC contem ao menos 12m de testada?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A APEC deverá obrigatoriamente ter testada igual ou maior do que 12 m.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_apec30
+PERGUNTA: A APEC contem ao menos 30% dentro de um mesmo perímetro? Raio mínimo de 10 m?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Corrigir o projeto para que se atenda: As áreas públicas de equipamentos comunitários, a serem transferidas ao Município, terão no mínimo 30% (trinta por cento) de seu total em um só perímetro, onde possa ser inscrito um círculo com raio mínimo de 10 m (dez metros), e em terreno com baixa declividade.
+
+GRUPO: ANALISE URBANISTICA
+ID: conf_averd
+PERGUNTA: Apresentou área(s) verde(s) conforme percentuais expressos?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Representar em projeto urbanístico a(s) áreas verdes solicitadas ao empreendimento.
+
+GRUPO: ANALISE GEO
+ID: conf_arquivogeo
+PERGUNTA: Arquivo DXF Recebido está de acordo para analisar?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Anexar digitalmente arquivo completo urbanístico referente ao processo (atualizado), Georreferenciado para Sirgas 2000 UTM 22 S, em formato DXF 2013;
+
+GRUPO: ANALISE GEO
+ID: conf_areaarquivogeo
+PERGUNTA: área do arquivo compatível com memorial e mapa?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A área(m²) do empreendimento informada em projeto urbanístico difere da área no arquivo georreferenciado. Deverá sanar a incompatibilidade.
+
+GRUPO: ANALISE GEO
+ID: conf_sobreparquivogeo
+PERGUNTA: área do empreendimento no arquivo sobrepões alguma área pública ou arruamento oficial? (detalhar em observações)
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: A projeção do empreendimento no arquivo georreferenciado apresenta sobreposição de área pública.
+
+GRUPO: DOCUMENTOS FINAIS PARA A EMISSÃO DO ACEITE
+ID: docfinal_ass
+PERGUNTA: Apresentou a prancha de projeto urbanística devidamente assinada?
+OPCOES: Não;Sim;Não se enquadra
+CONFORMES: Sim;Não se enquadra
+REGRA_Não: Apresentar a prancha de projeto urbanística devidamente assinada.
