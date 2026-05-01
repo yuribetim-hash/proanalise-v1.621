@@ -432,7 +432,7 @@ def inicializar_estados():
         st.session_state["pendencias_analise"] = {}
 
 # ============================================
-# CARREGAR TEMA (CLARO/ESCURO) - SEM ARQUIVO EXTERNO
+# CARREGAR TEMA (CLARO/ESCURO)
 # ============================================
 def carregar_tema():
     """Retorna o tema atual (claro ou escuro) baseado na configuração"""
@@ -461,11 +461,11 @@ def carregar_tema():
             "sidebar_fundo": "linear-gradient(180deg, #0a2a3a 0%, #051a24 100%)"
         },
         "botoes": {
-            "primario_fundo": "#0d6e2e",
-            "primario_fundo_hover": "#0f8a3a",
+            "primario_fundo": "#0a5c2a",
+            "primario_fundo_hover": "#0d6e2e",
             "secundario_fundo": "#0a2a3a",
             "secundario_fundo_hover": "#1a5276",
-            "texto": "#f8f9fa"
+            "texto": "#ffffff"
         },
         "status": {
             "conforme": {"fundo": "#ecfdf3", "borda": "#067647", "texto": "#067647", "icone": "✅"},
@@ -585,11 +585,16 @@ css_tema = f"""
         color: white !important;
     }}
     
+    /* BOTÕES - COR BRANCA FORÇADA */
+    button, button p, .stButton button, .stButton button p {{
+        color: #ffffff !important;
+        font-weight: 600 !important;
+    }}
+    
     .stButton > button {{
         border-radius: 8px !important;
         font-weight: 600 !important;
         font-size: 14px !important;
-        color: {tema["botoes"]["texto"]} !important;
         border: none !important;
         transition: all 0.3s ease !important;
     }}
@@ -621,6 +626,7 @@ css_tema = f"""
     
     .stDownloadButton button {{
         background-color: {tema["botoes"]["primario_fundo"]} !important;
+        color: #ffffff !important;
     }}
     
     .status-badge-conforme {{
@@ -781,7 +787,7 @@ document.addEventListener('DOMContentLoaded', function() {
 """, unsafe_allow_html=True)
 
 # ============================================
-# TELA DE LOGIN
+# TELA DE LOGIN (SEM INFORMAÇÃO DE NÍVEIS)
 # ============================================
 def tela_login():
     col_logo1, col_logo2, col_logo3 = st.columns([1, 2, 1])
@@ -810,13 +816,6 @@ def tela_login():
                 st.rerun()
             else:
                 st.error("Usuário ou senha inválidos.")
-    
-    with st.expander("ℹ️ Sobre os níveis de acesso"):
-        st.markdown("""
-        - **Nível 1 (Estagiário)**: Acesso básico - Realizar análises
-        - **Nível 2 (Estagiário Sênior)**: Acesso intermediário - Análises + Dashboard
-        - **Nível 3 (Analista Responsável)**: Acesso total - Análises + Dashboard + Comparador
-        """)
 
 if "logado" not in st.session_state:
     st.session_state["logado"] = False
