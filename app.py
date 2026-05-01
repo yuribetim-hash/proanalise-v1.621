@@ -465,7 +465,7 @@ def carregar_tema():
             "primario_fundo_hover": "#0f8a3a",
             "secundario_fundo": "#0a2a3a",
             "secundario_fundo_hover": "#1a5276",
-            "texto": "#ffffff"
+            "texto": "#f8f9fa"
         },
         "status": {
             "conforme": {"fundo": "#ecfdf3", "borda": "#067647", "texto": "#067647", "icone": "✅"},
