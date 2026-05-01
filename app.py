@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 import pandas as pd
 
 st.set_page_config(
-    page_title="Proanalise v1.62",
+    page_title="Proanalise v1.621",
     page_icon="📐",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -797,7 +797,7 @@ def tela_login():
         if os.path.exists("logo.png"):
             st.image("logo.png", width=200)
     
-    st.title("📐 Proanalise v1.62")
+    st.title("📐 Proanalise v1.621")
     st.caption("Sistema de análise urbanística e geração de parecer técnico")
     
     col1, col2, col3 = st.columns([1, 1.2, 1])
@@ -834,7 +834,7 @@ if not st.session_state["logado"]:
 if os.path.exists("logo.png"):
     st.sidebar.image("logo.png", width=150)
 
-st.sidebar.title("📐 Proanalise v1.62")
+st.sidebar.title("📐 Proanalise v1.621")
 st.sidebar.write(f"👤 {st.session_state['usuario']} - {st.session_state.get('papel', 'Analista')}")
 st.sidebar.write(f"🔒 Nível: {st.session_state.get('nivel', 1)}")
 
@@ -959,7 +959,7 @@ with col_logo:
     if os.path.exists("logo.png"):
         st.image("logo.png", width=100)
 with col_titulo:
-    st.title("📐 Proanalise v1.62")
+    st.title("📐 Proanalise v1.621")
     st.caption("Análise urbanística padronizada com geração de parecer técnico")
 
 # ============================================
