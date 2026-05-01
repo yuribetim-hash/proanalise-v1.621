@@ -438,6 +438,9 @@ def inicializar_estados():
 # CARREGAR TEMA (CLARO/ESCURO)
 # ============================================
 def carregar_tema():
+    """Retorna o tema atual (claro ou escuro) baseado na configuração"""
+    
+    # TEMA CLARO (padrão)
     tema_claro = {
         "cores": {
             "primaria": "#0a2a3a",
@@ -472,6 +475,7 @@ def carregar_tema():
         }
     }
     
+    # TEMA ESCURO
     tema_escuro = {
         "cores": {
             "primaria": "#e8f0fe",
@@ -506,6 +510,7 @@ def carregar_tema():
         }
     }
     
+    # Retorna o tema conforme a configuração atual
     if st.session_state.get("tema_mode") == "escuro":
         return tema_escuro
     return tema_claro
