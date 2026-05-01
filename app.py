@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 import pandas as pd
 
 st.set_page_config(
-    page_title="Proanalise v1.621",
+    page_title="Proanalise v 1.621",
     page_icon="📐",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -28,7 +28,7 @@ if "marcadas_revisao" not in st.session_state:
 if "anotacoes_pessoais" not in st.session_state:
     st.session_state["anotacoes_pessoais"] = {}
 
-HASH_SALT = "Proanalise_salt_2024"
+HASH_SALT = "proanalise_salt_2024"
 
 # ============================================
 # FUNÇÕES DE BACKUP
@@ -88,7 +88,6 @@ def restaurar_backup():
 # FUNÇÕES DE PERMISSÕES E USUÁRIOS
 # ============================================
 def carregar_usuarios(caminho="usuarios.txt"):
-    """Carrega usuários com níveis de permissão"""
     if not os.path.exists(caminho):
         st.error("Arquivo usuarios.txt não encontrado.")
         st.stop()
@@ -124,13 +123,11 @@ def carregar_usuarios(caminho="usuarios.txt"):
     return usuarios
 
 def tem_permissao(nivel_necessario):
-    """Verifica se o usuário logado tem permissão para a ação"""
     if "usuario_info" not in st.session_state:
         return False
     return st.session_state["usuario_info"]["nivel"] >= nivel_necessario
 
 def pode_ver_menu(menu_item):
-    """Verifica se o usuário pode ver um item do menu"""
     niveis_necessarios = {
         "1. Protocolo": 1,
         "2. Analista": 1,
@@ -435,10 +432,13 @@ def inicializar_estados():
         st.session_state["pendencias_analise"] = {}
 
 # ============================================
-# CARREGAR TEMA (CLARO/ESCURO)
+# CARREGAR TEMA (CLARO/ESCURO) - SEM ARQUIVO EXTERNO
 # ============================================
 def carregar_tema():
     """Retorna o tema atual (claro ou escuro) baseado na configuração"""
+    
+    if "tema_mode" not in st.session_state:
+        st.session_state["tema_mode"] = "claro"
     
     # TEMA CLARO (padrão)
     tema_claro = {
@@ -510,8 +510,7 @@ def carregar_tema():
         }
     }
     
-    # Retorna o tema conforme a configuração atual
-    if st.session_state.get("tema_mode") == "escuro":
+    if st.session_state["tema_mode"] == "escuro":
         return tema_escuro
     return tema_claro
 
@@ -531,9 +530,8 @@ css_tema = f"""
     h1 {{ color: {tema["cores"]["texto_titulo"]} !important; font-weight: 700 !important; font-size: 24px !important; }}
     h2, h3, h4 {{ color: {tema["cores"]["primaria"]} !important; font-weight: 600 !important; }}
     
-    /* Caption - texto abaixo do título */
     .stCaption {{
-        color: {tema["cores"].get("texto_caption", tema["cores"]["texto_secundario"])} !important;
+        color: {tema["cores"]["texto_caption"]} !important;
         font-size: 14px !important;
     }}
     
@@ -562,7 +560,6 @@ css_tema = f"""
         font-size: 14px !important;
     }}
     
-    /* DROPDOWN - Janela que abre */
     div[data-baseweb="menu"] {{
         background-color: #1a1a2e !important;
         border: 1px solid #2c6b96 !important;
@@ -588,7 +585,6 @@ css_tema = f"""
         color: white !important;
     }}
     
-    /* BOTÕES */
     .stButton > button {{
         border-radius: 8px !important;
         font-weight: 600 !important;
@@ -627,7 +623,6 @@ css_tema = f"""
         background-color: {tema["botoes"]["primario_fundo"]} !important;
     }}
     
-    /* STATUS BADGES */
     .status-badge-conforme {{
         background-color: {tema["status"]["conforme"]["fundo"]};
         border-left: 4px solid {tema["status"]["conforme"]["borda"]};
@@ -668,7 +663,6 @@ css_tema = f"""
         font-weight: 600;
     }}
     
-    /* PROGRESSO */
     .progress-wrap {{
         width: 100%;
         background: #e9ecef;
@@ -684,7 +678,6 @@ css_tema = f"""
         transition: width 0.3s ease;
     }}
     
-    /* CARDS E MÉTRICAS */
     .card {{
         padding: 12px 16px;
         border: 1px solid #c5d5e6;
@@ -711,7 +704,6 @@ css_tema = f"""
         font-weight: 700 !important;
     }}
     
-    /* EXPANDERS */
     .streamlit-expanderHeader {{
         background-color: {tema["cores"]["fundo_claro"]} !important;
         color: {tema["cores"]["primaria"]} !important;
@@ -724,7 +716,6 @@ css_tema = f"""
         border-radius: 0 0 8px 8px !important;
     }}
     
-    /* CARD DE REVISÃO */
     .card-revisao {{
         background-color: #fff3cd;
         border-left: 4px solid #ffc107;
@@ -733,7 +724,6 @@ css_tema = f"""
         margin: 5px 0;
     }}
     
-    /* TEXTOS GERAIS */
     p, li, .stMarkdown, .stText {{
         color: {tema["cores"]["texto_secundario"]};
     }}
@@ -742,12 +732,14 @@ css_tema = f"""
         border-color: {tema["cores"]["primaria_clara"]};
     }}
     
-    /* INFORMAÇÕES, SUCESSO, AVISOS, ERROS */
     .stInfo, .stSuccess, .stWarning, .stError {{
         border-radius: 8px !important;
     }}
 </style>
 """
+
+st.markdown(css_tema, unsafe_allow_html=True)
+
 # ============================================
 # JAVASCRIPT PARA O DROPDOWN
 # ============================================
@@ -797,8 +789,8 @@ def tela_login():
         if os.path.exists("logo.png"):
             st.image("logo.png", width=200)
     
-    st.title("📐 Proanalise v1.621")
-    st.caption("Sistema de análise urbanística e geração de parecer técnico")
+    st.title("📐 Proanalise v 1.621")
+    st.caption("Sistema de análise urbanística padronizada com geração de parecer técnico")
     
     col1, col2, col3 = st.columns([1, 1.2, 1])
     with col2:
@@ -819,7 +811,12 @@ def tela_login():
             else:
                 st.error("Usuário ou senha inválidos.")
     
-   
+    with st.expander("ℹ️ Sobre os níveis de acesso"):
+        st.markdown("""
+        - **Nível 1 (Estagiário)**: Acesso básico - Realizar análises
+        - **Nível 2 (Estagiário Sênior)**: Acesso intermediário - Análises + Dashboard
+        - **Nível 3 (Analista Responsável)**: Acesso total - Análises + Dashboard + Comparador
+        """)
 
 if "logado" not in st.session_state:
     st.session_state["logado"] = False
@@ -829,23 +826,28 @@ if not st.session_state["logado"]:
     st.stop()
 
 # ============================================
-# SIDEBAR
+# SIDEBAR (SEM LOGO)
 # ============================================
-if os.path.exists("logo.png"):
-    st.sidebar.image("logo.png", width=150)
-
-st.sidebar.title("📐 Proanalise v1.621")
+st.sidebar.title("📐 Proanalise v 1.621")
 st.sidebar.write(f"👤 {st.session_state['usuario']} - {st.session_state.get('papel', 'Analista')}")
 st.sidebar.write(f"🔒 Nível: {st.session_state.get('nivel', 1)}")
 
-# Toggle de tema
-tema_toggle = st.sidebar.toggle("🌙 Modo Escuro", value=(st.session_state["tema_mode"] == "escuro"))
-if tema_toggle:
-    st.session_state["tema_mode"] = "escuro"
-else:
-    st.session_state["tema_mode"] = "claro"
+# Toggle de tema (dois botões)
+st.sidebar.markdown("---")
+st.sidebar.subheader("🎨 Aparência")
+
+col_tema1, col_tema2 = st.sidebar.columns(2)
+with col_tema1:
+    if st.button("☀️ Claro", use_container_width=True):
+        st.session_state["tema_mode"] = "claro"
+        st.rerun()
+with col_tema2:
+    if st.button("🌙 Escuro", use_container_width=True):
+        st.session_state["tema_mode"] = "escuro"
+        st.rerun()
 
 # Backup
+st.sidebar.markdown("---")
 if st.sidebar.button("💾 Backup Manual", use_container_width=True):
     if fazer_backup_automatico():
         st.sidebar.success("Backup realizado com sucesso!")
@@ -959,8 +961,11 @@ with col_logo:
     if os.path.exists("logo.png"):
         st.image("logo.png", width=100)
 with col_titulo:
-    st.title("📐 Proanalise v1.621")
-    st.caption("Análise urbanística padronizada com geração de parecer técnico")
+    st.title("📐 Proanalise v 1.621")
+    st.caption("Sistema de análise urbanística padronizada com geração de parecer técnico")
+
+# Atualizar tema após definição do cabeçalho
+tema = carregar_tema()
 
 # ============================================
 # NAVEGAÇÃO (com base nas permissões)
@@ -980,14 +985,17 @@ if tem_permissao(2):
 if tem_permissao(3):
     menus_disponiveis.extend(menus_nivel3)
 
-etapa_atual = st.sidebar.radio("📋 Etapas", menus_disponiveis, 
-                                index=menus_disponiveis.index(st.session_state["etapa"]) if st.session_state["etapa"] in menus_disponiveis else 0)
+# Garantir que a etapa atual está disponível
+if st.session_state["etapa"] not in menus_disponiveis:
+    st.session_state["etapa"] = menus_disponiveis[0]
+
+etapa_atual = st.sidebar.radio("📋 Etapas", menus_disponiveis, index=menus_disponiveis.index(st.session_state["etapa"]))
 if etapa_atual != st.session_state["etapa"]:
     st.session_state["etapa"] = etapa_atual
     st.rerun()
 
 # ============================================
-# FUNÇÕES PRINCIPAIS (definir_conclusao, montar_inconformidades, etc)
+# FUNÇÕES PRINCIPAIS
 # ============================================
 def definir_conclusao(respostas, pendencias_manuais=None):
     for p in perguntas:
@@ -1213,21 +1221,18 @@ elif st.session_state["etapa"] == "3. Análise":
     observacoes = st.session_state["observacoes_analise"]
     pendencias_manuais = st.session_state["pendencias_analise"]
     
-    # Botão próximo não respondido
     proximo_id, proximo_idx = proxima_pergunta_nao_respondida(respostas, perguntas)
     if proximo_id:
         if st.button("🎯 Próxima pergunta não respondida", use_container_width=True):
             st.session_state["scroll_to"] = proximo_id
             st.rerun()
     
-    # Campo de anotações pessoais
     with st.expander("📓 Anotações Pessoais (não vão para o parecer)"):
         anotacao_atual = st.session_state["anotacoes_pessoais"].get(st.session_state["protocolo"], "")
         nova_anotacao = st.text_area("Suas anotações", value=anotacao_atual, height=100)
         if nova_anotacao != anotacao_atual:
             st.session_state["anotacoes_pessoais"][st.session_state["protocolo"]] = nova_anotacao
     
-    # Manter ordem do arquivo
     grupos_ordenados = []
     for p in perguntas:
         grupo = p["grupo"]
@@ -1283,7 +1288,6 @@ elif st.session_state["etapa"] == "3. Análise":
                 observacoes[pid] = obs
                 st.markdown("---")
             
-            # Inconformidades Diversas
             st.markdown("### 📝 Inconformidades Diversas")
             
             if grupo not in pendencias_manuais:
@@ -1371,7 +1375,6 @@ elif st.session_state["etapa"] == "4. Revisão":
         st.metric("Respondidas", preenchidas)
         st.metric("Inconformidades", total_inconformes)
     
-    # Gráfico de inconformidades
     fig = gerar_grafico_inconformidades(respostas, grupos_inconformes)
     if fig:
         st.plotly_chart(fig, use_container_width=True)
